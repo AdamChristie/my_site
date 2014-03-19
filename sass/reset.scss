@@ -1,0 +1,33 @@
+html { overflow-y: scroll; }
+body, h1, h2, h3, h4, ul, ol, li, p, address { margin: 0; padding: 0; }
+li { list-style-type: none; }
+
+/*** Print Media ***/
+@media print {	
+	body { width: 100%; margin: 0; }	
+	.hresume {
+		
+		address, li, p { 
+			font-size: 10pt; 
+		}	
+	
+		h2 { font-size: 13pt; }	
+		h3 { font-size: 12pt; }	
+		h4 { font-size: 11pt; }
+
+		h1, h2, h3, h4, ul, ol, p, address, div { 
+			page-break-before: avoid; 
+			page-break-after: avoid; 
+			orphans: 5; 
+			widows: 5; 
+		}	
+
+		ol, ul { display: block !important; }
+	}
+}
+
+/*** Speech Media ***/
+@media speech {	
+	h1, h2, h3, h4 { voice-family: paul; stress: 20; richness: 90; }	
+	h1 { pitch: x-low; pitch-range: 90; }
+}
